@@ -8,6 +8,8 @@ abstract class Routes {
   // Ubah ini ke HOME tanpa menggunakan _Paths.PAGES
   static const LOGIN = _Paths.LOGIN;
   static const HOME = _Paths.HOME;
+  static const PROFILE = _Paths.PROFILE;
+  static const PAYMENT = _Paths.PAYMENT;
 }
 
 abstract class _Paths {
@@ -15,4 +17,6 @@ abstract class _Paths {
   // HOME sudah memiliki nilai '/home'
   static const LOGIN = '/login';
   static const HOME = '/home';
+  static const PROFILE = '/profile';
+  static const PAYMENT = '/payment';
 }
