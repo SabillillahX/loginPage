@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../../pages/aneh/bindings/aneh_binding.dart';
 import '../../pages/aneh/views/aneh_view.dart';
+import '../../pages/anjay/bindings/anjay_binding.dart';
+import '../../pages/anjay/views/anjay_view.dart';
 import '../../pages/home/bindings/home_binding.dart';
 import '../../pages/home/views/home_view.dart';
 import '../../pages/login/bindings/login_binding.dart';
@@ -36,6 +38,11 @@ class AppPages {
       name: _Paths.ANEH,
       page: () => const AnehView(),
       binding: AnehBinding(),
+    ),
+    GetPage(
+      name: _Paths.ANJAY,
+      page: () => const AnjayView(),
+      binding: AnjayBinding(),
     ),
   ];
 }
