@@ -11,6 +11,7 @@ abstract class Routes {
   static const PROFILE = _Paths.PROFILE;
   static const ANEH = _Paths.ANEH;
   static const ANJAY = _Paths.ANJAY;
+  static const KOCAK = _Paths.KOCAK;
 }
 
 abstract class _Paths {
@@ -21,4 +22,5 @@ abstract class _Paths {
   static const PROFILE = '/profile';
   static const ANEH = '/aneh';
   static const ANJAY = '/anjay';
+  static const KOCAK = '/kocak';
 }

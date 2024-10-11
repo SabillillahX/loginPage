@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../../pages/aneh/bindings/aneh_binding.dart';
 import '../../pages/aneh/views/aneh_view.dart';
+import '../../pages/kocak/bindings/kocak_binding.dart';
+import '../../pages/kocak/views/kocak_view.dart';
 
 part 'app_routes.dart';
 
@@ -15,6 +17,11 @@ class AppPages {
       name: _Paths.ANEH,
       page: () => const AnehView(),
       binding: AnehBinding(),
+    ),
+    GetPage(
+      name: _Paths.KOCAK,
+      page: () => const KocakView(),
+      binding: KocakBinding(),
     ),
   ];
 }
