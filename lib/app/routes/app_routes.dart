@@ -5,14 +5,16 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
-  // Ubah ini ke HOME tanpa menggunakan _Paths.PAGES
+  // Ubah ini ke HOME tanpa menggunakan _Paths.PAGE
   static const ANEH = _Paths.ANEH;
   static const KOCAK = _Paths.KOCAK;
+
 }
 
 abstract class _Paths {
   _Paths._();
   // HOME sudah memiliki nilai '/home'
+
   static const ANEH = '/aneh';
-  static const KOCAK = '/kocak';
+  static const KOCAK = '/kocak;
 }
