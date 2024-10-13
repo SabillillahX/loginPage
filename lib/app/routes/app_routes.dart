@@ -6,17 +6,14 @@ part of 'app_pages.dart';
 abstract class Routes {
   Routes._();
   // Ubah ini ke HOME tanpa menggunakan _Paths.PAGES
-  static const LOGIN = _Paths.LOGIN;
   static const HOME = _Paths.HOME;
-  static const PROFILE = _Paths.PROFILE;
-  static const PAYMENT = _Paths.PAYMENT;
+  static const TAMBAH_PRODUK = _Paths.TAMBAH_PRODUK;
 }
 
 abstract class _Paths {
   _Paths._();
   // HOME sudah memiliki nilai '/home'
-  static const LOGIN = '/login';
+
   static const HOME = '/home';
-  static const PROFILE = '/profile';
-  static const PAYMENT = '/payment';
+  static const TAMBAH_PRODUK = '/tambah-produk';
 }
