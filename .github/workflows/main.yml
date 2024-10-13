@@ -1,0 +1,51 @@
+name: Flutter CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 'stable'
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Run Flutter analyze
+        run: flutter analyze
+
+      - name: Run Flutter format check
+        run: flutter format --set-exit-if-changed .
+
+      - name: Run tests
+        run: flutter test
+
+      - name: Build APK (Android)
+        if: matrix.os == 'ubuntu-latest'
+        run: flutter build apk --release
+
+      - name: Build iOS (macOS)
+        if: matrix.os == 'macos-latest'
+        run: |
+          flutter build ios --release
+          xcodebuild -workspace ios/Runner.xcworkspace -scheme Runner -sdk iphoneos
+
+      - name: Build Web
+        run: flutter build web --release
