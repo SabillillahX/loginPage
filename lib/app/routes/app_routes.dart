@@ -8,7 +8,6 @@ abstract class Routes {
   // Ubah ini ke HOME tanpa menggunakan _Paths.PAGE
   static const ANEH = _Paths.ANEH;
   static const KOCAK = _Paths.KOCAK;
-
 }
 
 abstract class _Paths {
@@ -16,5 +15,5 @@ abstract class _Paths {
   // HOME sudah memiliki nilai '/home'
 
   static const ANEH = '/aneh';
-  static const KOCAK = '/kocak;
+  static const KOCAK = '/kocak';
 }
