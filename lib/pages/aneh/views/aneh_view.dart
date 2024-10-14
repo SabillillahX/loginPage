@@ -13,11 +13,22 @@ class AnehView extends GetView<AnehController> {
         title: const Text('AnehView'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'AnehView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: const Column(
+        children: [
+          Center(
+            child: Text(
+              'AnehView is working',
+              style: TextStyle(fontSize: 20),
+            ),
+          ),
+          Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+              )
+            ],
+          )
+        ],
       ),
     );
   }
